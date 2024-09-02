@@ -1,0 +1,3 @@
+rootProject.name = "ZapryPrivateKeyHelperDemo"
+include ':app'
+include ':ZapryPrivateKey'
