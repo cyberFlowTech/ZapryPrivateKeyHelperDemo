@@ -1,5 +1,7 @@
 plugins {
     id 'com.android.application'
+//    id 'org.jetbrains.kotlin.android'
+
     id 'kotlin-android'
 }
 
@@ -26,6 +28,8 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
+    buildFeatures { viewBinding = true }
 }
 
 dependencies {
@@ -38,13 +42,5 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
-    // Retrofit
-    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
-    implementation 'com.squareup.retrofit2:converter-moshi:2.9.0'
-    implementation project(path: ':ZapryPrivateKey')
-
-    //性能监控 kotlin编译插件为1.3.72； 支持Gradle 6.8及以下
-//    debugImplementation 'io.github.didi.dokit:dokitx:3.5.0.1'
-
-
+    implementation project(path: ':lib_private_key')
 }

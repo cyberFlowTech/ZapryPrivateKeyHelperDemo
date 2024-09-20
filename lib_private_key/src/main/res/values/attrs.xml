@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="mimoColorBlack" format="color" />
+    <attr name="mimoColorBlack1" format="color" />
+    <attr name="mimoColorBlack2" format="color" />
+    <attr name="mimoColorBlack3" format="color" />
+    <attr name="mimoColorBlack4" format="color" />
+    <attr name="mimoColorBlack5" format="color" />
+    <attr name="mimoColorBlack6" format="color" />
+    <attr name="mimoColorBlack7" format="color" />
+    <attr name="mimoColorBlack8" format="color" />
+    <attr name="mimoColorBlack9" format="color" />
+    <attr name="mimoColorBlack10" format="color" />
+    <attr name="mimoColorBlack11" format="color" />
+    <attr name="mimoColorBlack12" format="color" />
+    <attr name="mimoColorBlack13" format="color" />
+
+    <attr name="mimoColorWhite" format="color" />
+    <attr name="mimoColorWhite1" format="color" />
+    <attr name="mimoColorWhite2" format="color" />
+    <attr name="mimoColorWhite3" format="color" />
+    <attr name="mimoColorWhite4" format="color" />
+    <attr name="mimoColorWhite5" format="color" />
+    <attr name="mimoColorWhite6" format="color" />
+    <attr name="mimoColorWhite7" format="color" />
+    <attr name="mimoColorWhite8" format="color" />
+    <attr name="mimoColorWhite9" format="color" />
+    <attr name="mimoColorWhite10" format="color" />
+    <attr name="mimoColorWhite11" format="color" />
+    <attr name="mimoColorWhite12" format="color" />
+
+    <attr name="mimoColorGreen1" format="color" />
+    <attr name="mimoColorGreen2" format="color" />
+    <!--    <attr name="mimoColorGreen3" format="color"/>-->
+    <!--    <attr name="mimoColorGreen4" format="color"/>-->
+    <!--    <attr name="mimoColorGreen5" format="color"/>-->
+
+    <attr name="mimoColorGray1" format="color" />
+    <attr name="mimoColorGray2" format="color" />
+    <attr name="mimoColorGray3" format="color" />
+    <attr name="mimoColorGray4" format="color" />
+    <attr name="mimoColorGray5" format="color" />
+    <attr name="mimoColorGray6" format="color" />
+    <attr name="mimoColorGray7" format="color" />
+    <attr name="mimoColorGray8" format="color" />
+    <attr name="mimoColorGray9" format="color" />
+    <attr name="mimoColorGray10" format="color" />
+    <attr name="mimoColorGray11" format="color" />
+    <attr name="mimoColorGray12" format="color" />
+    <attr name="mimoColorGray13" format="color" />
+    <attr name="mimoColorGray14" format="color" />
+    <attr name="mimoColorGray15" format="color" />
+    <attr name="mimoColorGray16" format="color" />
+    <attr name="mimoColorGray17" format="color" />
+    <attr name="mimoColorGray18" format="color" />
+    <attr name="mimoColorGray19" format="color" />
+    <attr name="mimoColorGray20" format="color" />
+
+    <attr name="mimoColorRed1" format="color" />
+    <attr name="mimoColorRed2" format="color" />
+    <attr name="mimoColorRed3" format="color" />
+    <attr name="mimoColorRed4" format="color" />
+    <attr name="mimoColorRed5" format="color" />
+
+    <attr name="mimoColorBlue1" format="color" />
+    <attr name="mimoColorBlue2" format="color" />
+    <attr name="mimoColorBlue3" format="color" />
+    <attr name="mimoColorBlue4" format="color" />
+    <attr name="mimoColorBlue5" format="color" />
+    <attr name="mimoColorBlue6" format="color" />
+    <attr name="mimoColorBlue7" format="color" />
+    <attr name="mimoColorBlue8" format="color" />
+
+    <attr name="mimoColorYellow1" format="color" />
+    <attr name="mimoColorYellow2" format="color" />
+    <attr name="mimoColorYellow3" format="color" />
+    <attr name="mimoColorYellow4" format="color" />
+    <attr name="mimoColorYellow5" format="color" />
+    <attr name="mimoColorYellow6" format="color" />
+    <attr name="mimoColorYellow7" format="color" />
+
+    <declare-styleable name="PureColorButton">
+        <attr name="corner_radius" format="dimension" />
+        <attr name="normal_solid_color" format="color" />
+        <attr name="normal_stroke_color" format="color" />
+        <attr name="normal_stroke_width" format="dimension" />
+        <attr name="pressed_solid_color" format="color" />
+        <attr name="pressed_stroke_color" format="color" />
+        <attr name="pressed_stroke_width" format="dimension" />
+        <attr name="disabled_solid_color" format="color" />
+        <attr name="disabled_stroke_color" format="color" />
+        <attr name="disabled_stroke_width" format="dimension" />
+        <attr name="drawable_horizontal_center" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="LinkTextView">
+        <attr name="linkBackgroundColor" format="color" />
+        <attr name="linkTextColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="PileLayout">
+        <attr name="PileLayout_verticalSpace" format="dimension" />
+        <attr name="PileLayout_pileWidth" format="dimension" />
+    </declare-styleable>
+
+
+    <declare-styleable name="HomeTabIndicator">
+        <attr name="indicator_icon" format="reference" />
+        <attr name="indicator_name" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="LoadingButton">
+        <attr name="paddingStart" format="dimension" />
+        <attr name="paddingEnd" format="dimension" />
+        <attr name="paddingTop" format="dimension" />
+        <attr name="paddingBottom" format="dimension" />
+        <attr name="paddingVertical" format="dimension" />
+        <attr name="paddingHorizontal" format="dimension" />
+        <attr name="enable" format="boolean" />
+        <attr name="text" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="YXTextView">
+        <attr name="stroke_width" format="dimension" />
+    </declare-styleable>
+</resources>

@@ -1,0 +1,28 @@
+<resources>
+    <string name="biometric_input_pay_password">Enter your payment password</string>
+    <string name="biometric_sending_crypto">Sending a Crypto Box</string>
+    <string name="biometric_contract_trading">Contract transaction</string>
+    <string name="payment_method">Payment method</string>
+    <string name="mine_wallet">Wallet</string>
+    <string name="biometric_setting_biometric">Set up biometric authentication</string>
+    <string name="biometric_setting_biometric_subtitle">Set up biometric authentication first.</string>
+    <string name="biometric_setting_biometric_desc">Wallet creation upon biometric authentication setup.</string>
+    <string name="common_skip">Skip</string>
+    <string name="common_setting_now">Set now</string>
+    <string name="common_cancel">Cancel</string>
+    <string name="common_ensure">Confirm</string>
+    <string name="biometric_error_password">Password is incorrect</string>
+    <string name="biometric_transferring_nft">Transferring an NFT to %1$s%2$s</string>
+    <string name="biometric_transferring">Transferring to %1$s%2$s</string>
+    <string name="signature_message_sign">Sign</string>
+    <string name="biometric_fingerprint_verify">Please verify your fingerprint</string>
+    <string name="tribe_confirm">Confirm</string>
+    <string name="settings_logout_check_confirm">Confirm(%1\$ds)</string>
+    <string name="common_tip">Reminder</string>
+    <string name="biometric_fingerprint_unset">Please add fingerprint in device system settings first</string>
+    <string name="biometric_go_settings">Go to settings</string>
+    <string name="biometric_dialog_title">Biometric for Zapry</string>
+    <string name="biometric_dialog_subtitle">Use your biometrics for authentication</string>
+    <string name="biometric_dialog_desc">Put your finger on the fingerprint sensor</string>
+
+</resources>

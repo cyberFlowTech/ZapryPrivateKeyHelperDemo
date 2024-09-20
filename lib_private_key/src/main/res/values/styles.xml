@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--系统的BottomSheetDialogFragment-->
+    <style name="BottomSheetDialogFragment" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/CustomBottomSheetStyle</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+    <style name="CustomBottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@color/transparent</item>
+    </style>
+
+    <!--基本Dialog样式-->
+    <style name="Theme.client.MimoDialog" parent="AlertDialog.AppCompat">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowSoftInputMode">adjustPan</item>
+        <item name="android:textAppearance">@style/Mimo.TextAppearance</item>
+    </style>
+
+    <style name="DividerStyle">
+        <item name="android:background">@color/white_2nd</item>
+        <item name="android:layout_height">@dimen/divider_height</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="Theme.client.Widget.MaterialDivider" parent="Widget.MaterialComponents.MaterialDivider">
+        <item name="dividerThickness">@dimen/divider_height</item> <!-- 设置分割线厚度 -->
+        <!-- 其他需要自定义的属性 -->
+    </style>
+</resources>

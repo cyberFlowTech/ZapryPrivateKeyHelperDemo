@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_white_solid_r15"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/title_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:gravity="center"
+        android:textColor="?attr/mimoColorBlack2"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        tools:text="是否跳转至第三方应用？"
+        tools:textColor="@color/black_2nd"
+        tools:visibility="visible" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="25dp"
+        android:visibility="gone"
+        tools:src="@tools:sample/avatars"
+        tools:visibility="visible" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/subtitle_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:gravity="start"
+        android:paddingStart="25dp"
+        android:paddingEnd="20dp"
+        android:textColor="?attr/mimoColorGray1"
+        android:textSize="15sp"
+        android:visibility="gone"
+        tools:text="提示：您所访问的页面将跳转至第三方应用，您在第三方DApp上的使用行为将适用于该第三方DApp的“用户协议”和“隐私政策”，并由直接并单独向您承担责任。"
+        tools:textColor="@color/gray_1st"
+        tools:visibility="visible" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:layout_marginBottom="25dp"
+        android:orientation="horizontal">
+
+        <com.cyberflow.mimolite.lib_private_key.widget.PureColorButton
+            android:id="@+id/cancel_btn"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="25dp"
+            android:background="@drawable/bg_exit_tribe_btn"
+            android:gravity="center"
+            android:text="@string/common_cancel"
+            android:textColor="?attr/mimoColorGray2"
+            android:textSize="17sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/space"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:normal_solid_color="@color/white_11th"
+            app:pressed_solid_color="@color/gray_5th"
+            app:pressed_stroke_width="1dp"
+            tools:text="取消"
+            tools:textColor="@color/gray_2nd"
+            tools:visibility="visible" />
+
+        <android.widget.Space
+            android:id="@+id/space"
+            android:layout_width="20dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/confirm_btn"
+            app:layout_constraintStart_toEndOf="@+id/cancel_btn"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_goneMarginEnd="5dp"
+            app:layout_goneMarginStart="5dp" />
+
+        <com.cyberflow.mimolite.lib_private_key.widget.PureColorButton
+            android:id="@+id/confirm_btn"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/bg_confirm_btn"
+            android:gravity="center"
+            android:text="@string/common_ensure"
+            android:textColor="?attr/mimoColorWhite1"
+            android:textSize="17sp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/space"
+            app:layout_constraintTop_toTopOf="parent"
+            app:normal_solid_color="@color/blue_4th"
+            app:pressed_solid_color="@color/blue_3rd"
+            app:pressed_stroke_width="1dp"
+            tools:textColor="@color/white_1st" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

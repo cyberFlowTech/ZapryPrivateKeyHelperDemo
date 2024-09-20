@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="title_bar_height">44dp</dimen>
+    <dimen name="conversation_page_avatar_size">40dp</dimen>
+    <dimen name="bottom_sheet_dialog_option_height">56dp</dimen>
+    <dimen name="bottom_sheet_dialog_last_option_height">81dp</dimen>
+    <dimen name="divider_height">0.5dp</dimen>
+    <!-- 气泡尖角偏移：带尖角的气泡内容的偏移 -->
+    <dimen name="bubble_tip_offset">0dp</dimen>
+    <dimen name="last_divider_height">8dp</dimen>
+    <!--  页面水平外边距  -->
+    <dimen name="activity_horizontal_margin">15dp</dimen>
+    <!--  页面垂直外边距  -->
+    <dimen name="activity_vertical_margin">15dp</dimen>
+
+    <dimen name="margin_grate">64dp</dimen>
+    <dimen name="margin_large_xx">40dp</dimen>
+    <dimen name="margin_large_x">32dp</dimen>
+    <dimen name="margin_large">24dp</dimen>
+    <dimen name="margin_double">16dp</dimen>
+    <dimen name="margin_normal">8dp</dimen>
+    <dimen name="margin_small">4dp</dimen>
+    <dimen name="margin_mini">2dp</dimen>
+
+    <dimen name="padding_normal">8dp</dimen>
+    <dimen name="padding_small">4dp</dimen>
+    <dimen name="padding_mini">2dp</dimen>
+    <dimen name="keyboard_btn_margin_special">-75dp</dimen>
+    <dimen name="keyboard_btn_margin">2dp</dimen>
+
+    <dimen name="d_app_icon_stoke_radius">12dp</dimen>
+
+    <dimen name="msg_long_click_popup_menu_item_width">60dp</dimen>
+</resources>

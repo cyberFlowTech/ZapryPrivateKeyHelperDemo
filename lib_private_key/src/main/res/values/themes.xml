@@ -1,0 +1,229 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="BaseTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="Theme.client" parent="BaseTheme">
+        <!-- Status bar color. -->
+        <item name="colorPrimary">?attr/mimoColorWhite1</item>
+        <item name="colorPrimaryDark">?attr/mimoColorWhite1</item>
+        <item name="android:colorPrimary">?attr/mimoColorWhite1</item>
+        <item name="android:colorPrimaryDark">?attr/mimoColorWhite1</item>
+
+        <item name="android:windowTranslucentStatus">true</item>    <!--状态栏为透明-->
+        <item name="android:windowTranslucentNavigation">false</item> <!--导航栏为不透明-->
+        <item name="android:statusBarColor">@color/transparent</item>
+        <!--    禁用自动大写    -->
+        <item name="textAllCaps">false</item>
+        <item name="android:textAllCaps">false</item>
+
+        <item name="android:titleTextAppearance">@style/Mimo.TextAppearance.Title</item>
+        <item name="titleTextAppearance">@style/Mimo.TextAppearance.Title</item>
+
+        <item name="android:windowBackground">?attr/mimoColorWhite5</item>
+        <item name="backgroundColor">?attr/mimoColorWhite5</item>
+        <item name="android:colorBackground">?attr/mimoColorWhite5</item>
+        <item name="android:colorAccent">@color/blue_1st</item>
+        <item name="colorAccent">@color/blue_1st</item>
+        <!--    不能直接设置android:textSize 导致控件设置TextAppearance 里的textSize无效   -->
+        <!--        <item name="android:textSize">14sp</item>-->
+        <item name="android:textAppearance">@style/Mimo.TextAppearance</item>
+        <item name="hintTextColor">@color/gray_3rd</item>
+
+        <item name="tabTextAppearance">@style/TabLayoutNormalTextAppearance</item>
+        <item name="tabSelectedTextAppearance">@style/TabLayoutSelectedTextAppearance</item>
+        <item name="tabStyle">@style/Mimo.Widget.TabLayout</item>
+
+        <item name="materialDividerStyle">@style/Theme.client.Widget.MaterialDivider</item>
+        <!-- Customize your theme here. -->
+        <item name="mimoColorBlack">@color/black</item>
+        <item name="mimoColorWhite">@color/white</item>
+        <item name="mimoColorGreen1">@color/green_1st</item>
+        <item name="mimoColorGreen2">@color/green_2nd</item>
+
+        <item name="mimoColorWhite1">@color/white_1st</item>
+        <item name="mimoColorWhite2">@color/white_2nd</item>
+        <item name="mimoColorWhite3">@color/white_3rd</item>
+        <item name="mimoColorWhite4">@color/white_4th</item>
+        <item name="mimoColorWhite5">@color/white_5th</item>
+        <item name="mimoColorWhite6">@color/white_6th</item>
+        <item name="mimoColorWhite7">@color/white_7th</item>
+        <item name="mimoColorWhite8">@color/white_8th</item>
+        <item name="mimoColorWhite9">@color/white_9th</item>
+        <item name="mimoColorWhite10">@color/white_10th</item>
+        <item name="mimoColorWhite11">@color/white_11th</item>
+        <item name="mimoColorWhite12">@color/white_12th</item>
+
+        <item name="mimoColorBlack1">@color/black_1st</item>
+        <item name="mimoColorBlack2">@color/black_2nd</item>
+        <item name="mimoColorBlack3">@color/black_3rd</item>
+        <item name="mimoColorBlack4">@color/black_4th</item>
+        <item name="mimoColorBlack5">@color/black_5th</item>
+        <item name="mimoColorBlack6">@color/black_6th</item>
+        <item name="mimoColorBlack7">@color/black_7th</item>
+        <item name="mimoColorBlack8">@color/black_8th</item>
+        <item name="mimoColorBlack9">@color/black_9th</item>
+        <item name="mimoColorBlack10">@color/black_10th</item>
+        <item name="mimoColorBlack11">@color/black_11th</item>
+        <item name="mimoColorBlack12">@color/black_12th</item>
+        <item name="mimoColorBlack13">@color/black_13th</item>
+
+        <item name="mimoColorGray1">@color/gray_1st</item>
+        <item name="mimoColorGray2">@color/gray_2nd</item>
+        <item name="mimoColorGray3">@color/gray_3rd</item>
+        <item name="mimoColorGray4">@color/gray_4th</item>
+        <item name="mimoColorGray5">@color/gray_5th</item>
+        <item name="mimoColorGray6">@color/gray_6th</item>
+        <item name="mimoColorGray7">@color/gray_7th</item>
+        <item name="mimoColorGray8">@color/gray_8th</item>
+        <item name="mimoColorGray9">@color/gray_9th</item>
+        <item name="mimoColorGray10">@color/gray_10th</item>
+        <item name="mimoColorGray11">@color/gray_11th</item>
+        <item name="mimoColorGray12">@color/gray_12th</item>
+        <item name="mimoColorGray13">@color/gray_13th</item>
+        <item name="mimoColorGray14">@color/gray_14th</item>
+        <item name="mimoColorGray15">@color/gray_15th</item>
+        <item name="mimoColorGray16">@color/gray_16th</item>
+        <item name="mimoColorGray17">@color/gray_17th</item>
+        <item name="mimoColorGray18">@color/gray_18th</item>
+        <item name="mimoColorGray19">@color/gray_19th</item>
+        <item name="mimoColorGray20">@color/gray_20th</item>
+
+        <item name="mimoColorRed1">@color/red_1st</item>
+        <item name="mimoColorRed2">@color/red_2nd</item>
+        <item name="mimoColorRed3">@color/red_3rd</item>
+        <item name="mimoColorRed4">@color/red_4th</item>
+        <item name="mimoColorRed5">@color/red_5th</item>
+
+        <item name="mimoColorBlue1">@color/blue_1st</item>
+        <item name="mimoColorBlue2">@color/blue_2nd</item>
+        <item name="mimoColorBlue3">@color/blue_3rd</item>
+        <item name="mimoColorBlue4">@color/blue_4th</item>
+        <item name="mimoColorBlue5">@color/blue_5th</item>
+        <item name="mimoColorBlue6">@color/blue_6th</item>
+        <item name="mimoColorBlue7">@color/blue_7th</item>
+        <item name="mimoColorBlue8">@color/blue_8th</item>
+
+        <item name="mimoColorYellow1">@color/yellow_1st</item>
+        <item name="mimoColorYellow2">@color/yellow_2nd</item>
+        <item name="mimoColorYellow3">@color/yellow_3rd</item>
+        <item name="mimoColorYellow4">@color/yellow_4th</item>
+        <item name="mimoColorYellow5">@color/yellow_5th</item>
+        <item name="mimoColorYellow6">@color/yellow_6th</item>
+        <item name="mimoColorYellow7">@color/yellow_7th</item>
+
+    </style>
+
+    <style name="Theme.client.AppBarOverlay" parent="ThemeOverlay.MaterialComponents.Dark.ActionBar" />
+
+<!--    <style name="Theme.client.Splash" parent="Theme.client">-->
+<!--        <item name="android:windowBackground">@drawable/bg_splash_page</item>-->
+<!--        <item name="android:statusBarColor">@color/black_1st</item>-->
+<!--        <item name="android:windowNoTitle">true</item>-->
+<!--        <item name="android:windowActionBar">@null</item>-->
+<!--    </style>-->
+
+    <style name="Theme.client.ChatWindow" parent="Theme.client">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@color/black2_alpha_60</item>
+        <item name="android:statusBarColor">@color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">@null</item>
+    </style>
+
+    <style name="Theme.client.Button" parent="Theme.AppCompat.DayNight">
+        <item name="colorButtonNormal">@color/blue_1st</item>
+        <item name="android:colorButtonNormal">@color/blue_1st</item>
+        <item name="android:textColor">@color/white_1st</item>
+    </style>
+
+    <style name="Theme.client.Button.Default">
+        <item name="corner_radius">100dp</item>
+        <item name="normal_solid_color">@color/blue_1st</item>
+        <item name="normal_stroke_color">@color/blue_1st</item>
+        <item name="normal_stroke_width">0dp</item>
+        <item name="pressed_stroke_width">0dp</item>
+        <item name="pressed_solid_color">@color/blue_2nd</item>
+        <item name="android:textColor">?attr/mimoColorBlack</item>
+    </style>
+
+<!--    <style name="Theme.client.Dialog" parent="android:Animation">-->
+<!--        <item name="android:windowEnterAnimation">@anim/dialog_enter</item>-->
+<!--        <item name="android:windowExitAnimation">@anim/dialog_exit</item>-->
+<!--    </style>-->
+
+<!--    <style name="Theme.client.Dialog.scale" parent="ThemeOverlay.Material3.Dialog">-->
+<!--        <item name="android:windowAnimationStyle">@style/DialogAnimation.Scale</item>-->
+<!--    </style>-->
+
+    <style name="Theme.client.Dialog.Alert" parent="Theme.MaterialComponents.Dialog.Alert" />
+
+    <style name="Theme.client.EditText">
+    </style>
+
+<!--    <style name="Theme.client.EditText.LoginEdit">-->
+<!--        <item name="android:textColor">@color/black_1st</item>-->
+<!--        <item name="android:textSize">16sp</item>-->
+<!--        <item name="android:textColorHint">@color/gray_3rd</item>-->
+<!--        <item name="android:gravity">center</item>-->
+<!--        <item name="android:singleLine">true</item>-->
+<!--        <item name="android:background">@drawable/edit_account_btn_shape</item>-->
+<!--        <item name="android:maxLines">1</item>-->
+<!--    </style>-->
+
+    <style name="Theme.client.TextView">
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="Theme.client.TextView.TitleText">
+        <item name="android:textColor">@color/black_2nd</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <style name="Theme.client.TextView.LoginPageEditTextInputTitle">
+        <item name="android:textColor">@color/gray_1st</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+<!--    <style name="DialogAnimation.Scale" parent="MaterialAlertDialog.Material3.Animation">-->
+<!--        <item name="android:windowEnterAnimation">@anim/dialog_scale_enter</item>-->
+<!--        <item name="android:windowExitAnimation">@anim/dialog_scale_exit</item>-->
+<!--    </style>-->
+
+    <style name="Mimo.TextAppearance" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="Mimo.TextAppearance.Title" parent="TextAppearance.Material3.ActionBar.Title">
+        <item name="android:textColor">?attr/mimoColorBlack11</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TabLayoutNormalTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="autoSizeTextType">none</item>
+        <item name="textAllCaps">false</item>
+    </style>
+
+    <style name="TabLayoutSelectedTextAppearance" parent="TabLayoutNormalTextAppearance">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Mimo.Widget.TabLayout" parent="Widget.MaterialComponents.TabLayout">
+        <item name="tabTextAppearance">?attr/tabTextAppearance</item>
+    </style>
+
+<!--    <style name="MProgressBar.Coin" parent="@android:style/Widget.ProgressBar">-->
+<!--        <item name="android:indeterminateOnly">true</item>-->
+<!--        <item name="android:indeterminateDrawable">@drawable/progress_red_envelope_coin</item>-->
+<!--        <item name="android:indeterminateBehavior">repeat</item>-->
+<!--        <item name="android:indeterminateDuration">600</item>-->
+<!--    </style>-->
+
+    <style name="TransparentDialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+    </style>
+
+</resources>
