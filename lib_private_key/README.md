@@ -1,3 +1,8 @@
+## use
+
+`PrivateKeyLib.initialize(this, userId)`
+
+
 ## Build
 
 ### 方式1

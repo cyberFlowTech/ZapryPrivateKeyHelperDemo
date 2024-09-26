@@ -148,7 +148,7 @@ open class RNWalletActivity() : ReactActivity(), IWindowActionApi, RNActionInter
             TEST_USER_ID
         )
         extras.putString("baseUrl", "")
-        extras.putString("securityKey", LoginConstant.security_key)
+        extras.putString("securityKey", "")
         extras.putBoolean("newcomer", true)
 
         extras.putInt("authType", BiometricHelper.getVerifyType().value)

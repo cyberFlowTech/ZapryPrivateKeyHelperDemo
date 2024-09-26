@@ -1,9 +1,6 @@
 package com.zapry.pkdemo.constant;
 
 public class LoginConstant {
-    // TODO: 2024/9/26 是否需要删除 
-    public static final String security_key = "*&^%aw#$@#@%";
-
     public static final String USER_ID = "user_id";
 
     public static final String API = "api";                         //登录参数
