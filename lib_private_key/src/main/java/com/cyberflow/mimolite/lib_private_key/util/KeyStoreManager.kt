@@ -9,7 +9,7 @@ import android.security.keystore.KeyGenParameterSpec
 import android.security.keystore.KeyProperties
 import android.util.Log
 import androidx.annotation.RequiresApi
-import com.cyberflow.mimolite.lib_private_key.PrivateKeyApp
+import com.cyberflow.mimolite.lib_private_key.PrivateKeyLib
 import com.cyberflow.mimolite.lib_private_key.SP_WALLET
 import com.cyberflow.mimolite.lib_private_key.ext.masked
 import com.tencent.mmkv.MMKV
@@ -38,7 +38,7 @@ class KeyStoreManager private constructor() {
     private val alias = "mimo-key-alias"
 
     private val sp
-        get() = PrivateKeyApp.context.getSharedPreferences(
+        get() = PrivateKeyLib.context.getSharedPreferences(
             SP_WALLET,
             Context.MODE_PRIVATE
         )
@@ -87,7 +87,7 @@ class KeyStoreManager private constructor() {
             val notAfter: Calendar = Calendar.getInstance()
             notAfter.add(Calendar.YEAR, 1)
 
-            val spec = KeyPairGeneratorSpec.Builder(PrivateKeyApp.context)
+            val spec = KeyPairGeneratorSpec.Builder(PrivateKeyLib.context)
                 .setAlias(alias)
                 .setSubject(X500Principal("CN=$alias"))
                 .setSerialNumber(BigInteger.ONE)

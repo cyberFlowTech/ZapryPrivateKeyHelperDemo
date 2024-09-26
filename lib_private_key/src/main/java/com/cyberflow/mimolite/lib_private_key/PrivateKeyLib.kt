@@ -2,13 +2,14 @@ package com.cyberflow.mimolite.lib_private_key
 
 import android.annotation.SuppressLint
 import android.content.Context
+import com.tencent.mmkv.MMKV
 
 /**
  * @title
  * @author Darren.eth
  * @Date
  */
-class PrivateKeyApp {
+class PrivateKeyLib {
 
     companion object {
         @SuppressLint("StaticFieldLeak")
@@ -18,6 +19,8 @@ class PrivateKeyApp {
         fun initialize(context: Context, userId: String) {
             this.context = context
             this.userId = userId
+
+            MMKV.initialize(context)
         }
     }
 }

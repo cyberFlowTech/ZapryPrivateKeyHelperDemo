@@ -37,7 +37,7 @@ object PrivateKeyMgr {
     private const val TAG = "PrivateKeyMgr"
 
     private val sp
-        get() = PrivateKeyApp.context.getSharedPreferences(
+        get() = PrivateKeyLib.context.getSharedPreferences(
             SP_WALLET,
             Context.MODE_PRIVATE
         )

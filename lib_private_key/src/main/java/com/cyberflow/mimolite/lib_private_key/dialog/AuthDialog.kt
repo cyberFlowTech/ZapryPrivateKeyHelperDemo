@@ -14,7 +14,7 @@ import androidx.biometric.BiometricPrompt
 import androidx.core.view.isVisible
 import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.FragmentManager
-import com.cyberflow.mimolite.lib_private_key.PrivateKeyApp
+import com.cyberflow.mimolite.lib_private_key.PrivateKeyLib
 import com.cyberflow.mimolite.lib_private_key.PrivateKeyMgr
 import com.cyberflow.mimolite.lib_private_key.R
 import com.cyberflow.mimolite.lib_private_key.biometric.BiometricCallback
@@ -35,7 +35,7 @@ class AuthDialog : BottomSheetDialogFragment() {
     private var _binding: DialogBiometricVerifyBinding? = null
     private val binding: DialogBiometricVerifyBinding get() = _binding!!
 
-    private val userId get() = PrivateKeyApp.userId
+    private val userId get() = PrivateKeyLib.userId
 
 
     private fun TextView.fillText(text: String) {

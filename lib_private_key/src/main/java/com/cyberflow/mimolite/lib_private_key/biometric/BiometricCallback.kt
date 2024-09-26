@@ -4,7 +4,7 @@ import android.util.Log
 import android.widget.Toast
 import androidx.biometric.BiometricPrompt
 import androidx.biometric.BiometricPrompt.AuthenticationCallback
-import com.cyberflow.mimolite.lib_private_key.PrivateKeyApp
+import com.cyberflow.mimolite.lib_private_key.PrivateKeyLib
 import com.cyberflow.mimolite.lib_private_key.R
 
 abstract class BiometricCallback : AuthenticationCallback() {
@@ -36,7 +36,7 @@ abstract class BiometricCallback : AuthenticationCallback() {
     open fun onPasswordFailed() {
         Log.e(tag, "onPasswordFailed: $INCORRECT_PASSWORD")
         Toast.makeText(
-            PrivateKeyApp.context,
+            PrivateKeyLib.context,
             R.string.biometric_error_password,
             Toast.LENGTH_SHORT
         ).show()

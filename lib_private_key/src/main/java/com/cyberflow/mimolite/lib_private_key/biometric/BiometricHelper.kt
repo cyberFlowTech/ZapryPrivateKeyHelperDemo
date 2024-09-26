@@ -11,7 +11,7 @@ import androidx.biometric.BiometricPrompt
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
-import com.cyberflow.mimolite.lib_private_key.PrivateKeyApp
+import com.cyberflow.mimolite.lib_private_key.PrivateKeyLib
 import com.cyberflow.mimolite.lib_private_key.PrivateKeyMgr
 import com.cyberflow.mimolite.lib_private_key.R
 import com.cyberflow.mimolite.lib_private_key.SETTING_KEY_ENABLE_LAUNCH_VERIFY
@@ -23,10 +23,10 @@ import com.cyberflow.mimolite.lib_private_key.dialog.CommonConfirmDialog
 object BiometricHelper {
     private const val TAG = "BiometricHelper"
 
-    private val userId: String get() = PrivateKeyApp.userId
+    private val userId: String get() = PrivateKeyLib.userId
 
     private val sp
-        get() = PrivateKeyApp.context.getSharedPreferences(
+        get() = PrivateKeyLib.context.getSharedPreferences(
             SP_WALLET,
             Context.MODE_PRIVATE
         )
@@ -138,7 +138,7 @@ object BiometricHelper {
                         VerifyType.PASSWORD -> this
                         VerifyType.BIOMETRICS -> {
                             // 生物识别需要检测是否可用
-                            if (!checkBiometric(PrivateKeyApp.context)) {
+                            if (!checkBiometric(PrivateKeyLib.context)) {
 
                                 val payPwd = userId?.let {
                                     PrivateKeyMgr.getPayPassword(it)
