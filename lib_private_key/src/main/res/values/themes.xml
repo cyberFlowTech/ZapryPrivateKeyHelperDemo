@@ -117,12 +117,12 @@
 
     <style name="Theme.client.AppBarOverlay" parent="ThemeOverlay.MaterialComponents.Dark.ActionBar" />
 
-<!--    <style name="Theme.client.Splash" parent="Theme.client">-->
-<!--        <item name="android:windowBackground">@drawable/bg_splash_page</item>-->
-<!--        <item name="android:statusBarColor">@color/black_1st</item>-->
-<!--        <item name="android:windowNoTitle">true</item>-->
-<!--        <item name="android:windowActionBar">@null</item>-->
-<!--    </style>-->
+    <style name="Theme.client.Splash" parent="Theme.client">
+        <item name="android:windowBackground">@drawable/bg_splash_page</item>
+        <item name="android:statusBarColor">@color/black_1st</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">@null</item>
+    </style>
 
     <style name="Theme.client.ChatWindow" parent="Theme.client">
         <item name="android:windowIsTranslucent">true</item>
@@ -162,15 +162,15 @@
     <style name="Theme.client.EditText">
     </style>
 
-<!--    <style name="Theme.client.EditText.LoginEdit">-->
-<!--        <item name="android:textColor">@color/black_1st</item>-->
-<!--        <item name="android:textSize">16sp</item>-->
-<!--        <item name="android:textColorHint">@color/gray_3rd</item>-->
-<!--        <item name="android:gravity">center</item>-->
-<!--        <item name="android:singleLine">true</item>-->
-<!--        <item name="android:background">@drawable/edit_account_btn_shape</item>-->
-<!--        <item name="android:maxLines">1</item>-->
-<!--    </style>-->
+    <style name="Theme.client.EditText.LoginEdit">
+        <item name="android:textColor">@color/black_1st</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColorHint">@color/gray_3rd</item>
+        <item name="android:gravity">center</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:background">@drawable/edit_account_btn_shape</item>
+        <item name="android:maxLines">1</item>
+    </style>
 
     <style name="Theme.client.TextView">
         <item name="android:includeFontPadding">false</item>
@@ -214,12 +214,12 @@
         <item name="tabTextAppearance">?attr/tabTextAppearance</item>
     </style>
 
-<!--    <style name="MProgressBar.Coin" parent="@android:style/Widget.ProgressBar">-->
-<!--        <item name="android:indeterminateOnly">true</item>-->
-<!--        <item name="android:indeterminateDrawable">@drawable/progress_red_envelope_coin</item>-->
-<!--        <item name="android:indeterminateBehavior">repeat</item>-->
-<!--        <item name="android:indeterminateDuration">600</item>-->
-<!--    </style>-->
+    <style name="MProgressBar.Coin" parent="@android:style/Widget.ProgressBar">
+        <item name="android:indeterminateOnly">true</item>
+        <item name="android:indeterminateDrawable">@drawable/progress_red_envelope_coin</item>
+        <item name="android:indeterminateBehavior">repeat</item>
+        <item name="android:indeterminateDuration">600</item>
+    </style>
 
     <style name="TransparentDialogTheme" parent="Theme.AppCompat.Light.Dialog">
         <item name="android:windowBackground">@android:color/transparent</item>

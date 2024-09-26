@@ -1,0 +1,28 @@
+<resources>
+    <string name="biometric_input_pay_password">Vui lòng nhập mật khẩu thanh toán</string>
+    <string name="biometric_sending_crypto">Đang gửi một hộp tiền điện tử</string>
+    <string name="biometric_contract_trading">Giao dịch hợp đồng</string>
+    <string name="payment_method">Phương thức thanh toán</string>
+    <string name="mine_wallet">Ví tiền</string>
+    <string name="biometric_setting_biometric">Vui lòng cài đặt xác thực sinh trắc học</string>
+    <string name="biometric_setting_biometric_subtitle">Hãy thiết lập xác thực sinh trắc học trước khi tiếp tục.</string>
+    <string name="biometric_setting_biometric_desc">Cài đặt xác thực sinh trắc học, tự động tạo ví tiền.</string>
+    <string name="common_skip">Tạm bỏ qua</string>
+    <string name="common_setting_now">Đặt ngay</string>
+    <string name="common_cancel">Huỷ bỏ</string>
+    <string name="common_ensure">Chắc chắn</string>
+    <string name="biometric_error_password">Mật khẩu không đúng</string>
+    <string name="biometric_transferring_nft">Đang chuyển giao một NFT đến %1$s%2$s</string>
+    <string name="biometric_transferring">Đang chuyển tiền đến %1$s%2$s</string>
+    <string name="signature_message_sign">ký tên</string>
+    <string name="biometric_fingerprint_verify">Vui lòng xác minh dấu vân tay</string>
+    <string name="tribe_confirm">Đúng</string>
+    <string name="settings_logout_check_confirm">Đúng(%1\$ds)</string>
+    <string name="common_tip">Nhắc nhở</string>
+    <string name="biometric_fingerprint_unset">Vui lòng thêm dấu vân tay trong cài đặt hệ thống trên thiết bị trước</string>
+    <string name="biometric_go_settings">Đi đến cài đặt</string>
+    <string name="biometric_dialog_title">Zapry sử dụng nhận dạng sinh trắc học</string>
+    <string name="biometric_dialog_subtitle">Sử dụng sinh trắc học để xác thực</string>
+    <string name="biometric_dialog_desc">Đặt ngón tay lên cảm biến vân tay</string>
+    
+</resources>

@@ -1,0 +1,28 @@
+<resources>
+    <string name="biometric_input_pay_password">支払いパスワードを入力してください</string>
+    <string name="biometric_sending_crypto">クリプトボックを送信中</string>
+    <string name="biometric_contract_trading">契約トランザクション</string>
+    <string name="payment_method">支払い方法</string>
+    <string name="mine_wallet">ウォレット</string>
+    <string name="biometric_setting_biometric">生体認証の設定</string>
+    <string name="biometric_setting_biometric_subtitle">先に生体認証を設定してください。</string>
+    <string name="biometric_setting_biometric_desc">生体認証の設定時にウォレットを作成します。</string>
+    <string name="common_skip">スキップ</string>
+    <string name="common_setting_now">今すぐ設定する</string>
+    <string name="common_cancel">キャンセル</string>
+    <string name="common_ensure">確定</string>
+    <string name="biometric_error_password">パスワードが間違っています</string>
+    <string name="biometric_transferring_nft">%1$s%2$sさんにNFTを転送しています</string>
+    <string name="biometric_transferring">%1$s%2$sに送金しています</string>
+    <string name="signature_message_sign">署名</string>
+    <string name="biometric_fingerprint_verify">指紋を確認してください</string>
+    <string name="tribe_confirm">確認</string>
+    <string name="settings_logout_check_confirm">確認(%1\$ds)</string>
+    <string name="common_tip">再確認の通知</string>
+    <string name="biometric_fingerprint_unset">システム設定で指紋（Touch ID）を先に追加してください</string>
+    <string name="biometric_go_settings">設定に移動</string>
+    <string name="biometric_dialog_title">Zapryで生体認証を有効化</string>
+    <string name="biometric_dialog_subtitle">生体認証を使用して登録する</string>
+    <string name="biometric_dialog_desc">指紋センサーに指を置いてください</string>
+
+</resources>

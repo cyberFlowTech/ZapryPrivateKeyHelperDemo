@@ -1,0 +1,28 @@
+<resources>
+    <string name="biometric_input_pay_password">결제 비밀번호 입력</string>
+    <string name="biometric_sending_crypto">크립터 박시즈 보내기</string>
+    <string name="biometric_contract_trading">계약 거래</string>
+    <string name="payment_method">지불 방법</string>
+    <string name="mine_wallet">월렛</string>
+    <string name="biometric_setting_biometric">생체 인증 설정</string>
+    <string name="biometric_setting_biometric_subtitle">먼저 생체 인증을 설정하세요.</string>
+    <string name="biometric_setting_biometric_desc">생체 인증 설정 시 월렛 생성.</string>
+    <string name="common_skip">잠시 넘어가기</string>
+    <string name="common_setting_now">지금 설정하기</string>
+    <string name="common_cancel">취소</string>
+    <string name="common_ensure">확인</string>
+    <string name="biometric_error_password">비밀번호가 잘못되었습니다</string>
+    <string name="biometric_transferring_nft">%1$s%2$s에게 NFT를 전송하고 있습니다</string>
+    <string name="biometric_transferring">%1$s%2$s에게 이체 중입니다</string>
+    <string name="signature_message_sign">서명</string>
+    <string name="biometric_fingerprint_verify">지문을 인증해주세요</string>
+    <string name="tribe_confirm">확인</string>
+    <string name="settings_logout_check_confirm">확인(%1\$ds)</string>
+    <string name="common_tip">힌트</string>
+    <string name="biometric_fingerprint_unset">장치 시스템 설정에 지문을 먼저 추가하세요</string>
+    <string name="biometric_go_settings">설정으로 이동</string>
+    <string name="biometric_dialog_title">Zapry의 생체 인식 사용</string>
+    <string name="biometric_dialog_subtitle">생체 인식으로 신원을 확인</string>
+    <string name="biometric_dialog_desc">손가락을 지문 센서에 대세요</string>
+
+</resources>
