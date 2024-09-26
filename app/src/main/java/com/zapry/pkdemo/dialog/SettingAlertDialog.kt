@@ -39,7 +39,6 @@ class SettingAlertDialog(context: Context) : AppCompatDialog(context) {
         }
 
         binding.tvDesc.isVisible = true
-//            ARouter.getInstance().navigation(ChainService::class.java).getAddress().isNullOrEmpty()
         binding.tvDesc.text = if (showPassword || !biometricEnable) {
             context.getString(R.string.biometric_setting_pay_password_desc)
         } else {
@@ -47,14 +46,6 @@ class SettingAlertDialog(context: Context) : AppCompatDialog(context) {
         }
 
         binding.tvPositive.setOnClickListener {
-//            RNPageLauncher.launch(
-//                it.context,
-//                if (biometricEnable) {
-//                    RNPageArgs.OpenBiometricBoot
-//                } else {
-//                    RNPageArgs.PayPasswordSetting
-//                }
-//            )
             dismiss()
         }
         binding.tvNegative.setOnClickListener {

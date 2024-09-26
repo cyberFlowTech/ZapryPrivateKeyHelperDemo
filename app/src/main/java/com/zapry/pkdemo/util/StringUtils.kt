@@ -1,18 +1,12 @@
 package com.zapry.pkdemo.util
 
-import android.content.Context
-import android.content.res.Resources
 import android.graphics.Color
 import android.icu.text.DecimalFormat
 import android.os.Build
 import android.text.TextUtils
 import android.util.Base64
-import androidx.annotation.ArrayRes
 import androidx.annotation.ColorInt
-import androidx.annotation.StringRes
 import androidx.core.util.PatternsCompat
-//import com.cyberflow.mimolite.common.app.BaseYXApp
-//import com.cyberflow.mimolite.lib.resource.textstring.R
 import com.google.gson.reflect.TypeToken
 import org.json.JSONArray
 import org.json.JSONException
@@ -139,51 +133,6 @@ object StringUtils {
         return String(chars)
     }
 
-    /**
-     * Return the string value associated with a particular resource ID.
-     *
-     * @param id The desired resource identifier.
-     * @return the string value associated with a particular resource ID.
-     */
-//    fun getString(@StringRes id: Int): String {
-//        return try {
-//            BaseYXApp.instance.getString(id)
-//        } catch (e: Resources.NotFoundException) {
-//            e.printStackTrace()
-//            ""
-//        }
-//    }
-
-    /**
-     * Return the string value associated with a particular resource ID.
-     *
-     * @param id         The desired resource identifier.
-     * @param formatArgs The format arguments that will be used for substitution.
-     * @return the string value associated with a particular resource ID.
-     */
-//    fun getString(@StringRes id: Int, vararg formatArgs: Any?): String {
-//        return try {
-//            BaseYXApp.instance.getString(id, formatArgs)
-//        } catch (e: Resources.NotFoundException) {
-//            e.printStackTrace()
-//            ""
-//        }
-//    }
-
-    /**
-     * Return the string array associated with a particular resource ID.
-     *
-     * @param id The desired resource identifier.
-     * @return The string array associated with the resource.
-     */
-//    fun getStringArray(@ArrayRes id: Int): Array<String?> {
-//        return try {
-//            BaseYXApp.instance.resources.getStringArray(id)
-//        } catch (e: Resources.NotFoundException) {
-//            e.printStackTrace()
-//            arrayOfNulls(0)
-//        }
-//    }
 
     fun hasText(str: String): Boolean {
         return if (str.isNullOrEmpty()) {
@@ -430,67 +379,6 @@ object StringUtils {
     fun unwrapBase64(base64String: String): String {
         return decodeFromBase64(base64String).toString(Charsets.UTF_8)
     }
-
-//    private val THOUSAND = BigDecimal(1000)
-//    private val MILLION = BigDecimal(1000) * THOUSAND
-//    private val BILLION
-//        get() = if (LanguageUtil.isChain()) {
-//            BigDecimal(100) * MILLION // 中文显示的是亿的值
-//        } else {
-//            BigDecimal(1000) * MILLION // 英文显示的是十亿的值
-//        }
-//
-//    // 万亿
-//    private val TRILLION = BigDecimal(1000 * 1000) * MILLION
-
-//    fun formatDigital(context: Context?, amount: BigDecimal, scale: Int = 2): String {
-//        var value = amount
-//        var unit = ""
-//        when {
-//
-//            amount.abs() >= TRILLION -> {
-//                value = amount / TRILLION
-//                unit = context?.getString(R.string.quotation_magnitude_trillion) ?: "T"
-//            }
-//
-//            amount.abs() >= BILLION -> {
-//                value = amount / BILLION
-//                unit = if (LanguageUtil.isChain()) {
-//                    // 中文环境是亿不是十亿
-//                    context?.getString(R.string.quotation_magnitude_hundred_million) ?: "B"
-//                } else {
-//                    context?.getString(R.string.quotation_magnitude_billion) ?: "B"
-//                }
-//            }
-//
-//            amount.abs() >= MILLION -> {
-//                value = amount / MILLION
-//                unit = context?.getString(R.string.quotation_magnitude_million) ?: "M"
-//            }
-//
-//            amount.abs() >= THOUSAND * BigDecimal(10) && LanguageUtil.isChain() -> {
-//                value = amount / (THOUSAND * BigDecimal(10))
-//                unit = context?.getString(R.string.quotation_magnitude_ten_thousand) ?: "M"
-//            }
-//
-//            amount.abs() >= THOUSAND -> {
-//                if (LanguageUtil.isChain()) {
-//                    value = amount
-//                    unit = ""
-//                } else {
-//                    value = amount / THOUSAND
-//                    unit = context?.getString(R.string.quotation_magnitude_thousand) ?: "K"
-//                }
-//            }
-//
-//            else -> {
-//                value = amount
-//                unit = ""
-//            }
-//        }
-//
-//        return formatOmitPrice(value, scale) + unit
-//    }
 
     /**
      * 获取[BigDecimal]小数点后中连续有效的零数量长度

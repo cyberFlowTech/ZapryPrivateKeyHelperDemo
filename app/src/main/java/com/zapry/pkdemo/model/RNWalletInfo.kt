@@ -8,11 +8,11 @@ import kotlinx.parcelize.Parcelize
 @Parcelize
 data class RNWalletInfo(
     @SerializedName("address")
-    val address: String? = "", // 0x075d393f84b72c91a36fdb0c51773fce07296bde
+    val address: String? = "",
     @SerializedName("mnemonic")
-    val mnemonic: String? = "", // lumber base dose art hurdle sphere economy bubble burst quit road thunder
+    val mnemonic: String? = "",
     @SerializedName("privateKey")
-    val privateKey: String? = "" // 0x6c9c32cba86e37cc3cbedde1dac6bd2fe8f272214aa33b887dc4272236e4b43e
+    val privateKey: String? = ""
 ) : Parcelable
 
 

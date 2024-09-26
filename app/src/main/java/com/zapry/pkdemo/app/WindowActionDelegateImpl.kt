@@ -41,10 +41,8 @@ class WindowActionDelegateImpl private constructor(
     private fun onReleaseInner() {
         pendingOnGlobalLayoutListener.forEach { r ->
             r.get()?.let { l ->
-//                runCachingWithLog {
-                    activity.window.decorView.viewTreeObserver
-                        .removeOnGlobalLayoutListener(l)
-//                }
+                activity.window.decorView.viewTreeObserver
+                    .removeOnGlobalLayoutListener(l)
             }
         }
         isWindowActive = false

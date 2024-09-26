@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName
 
 data class MultiWalletInfo(
     @SerializedName("mnemonic")
-    val mnemonic: String, // sword bike ozone dinosaur bright hover then ginger cannon toy oppose differ
+    val mnemonic: String,
     @SerializedName("wallet")
     val wallet: Map<String, ChainInfo>,
     @SerializedName("extData")

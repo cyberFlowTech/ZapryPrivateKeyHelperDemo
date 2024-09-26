@@ -10,11 +10,10 @@ import com.zapry.pkdemo.rn.MimoReactNativeHost
 private const val TAG = "RNApplicationDelegate"
 
 
-//@Route(path = PageConst.App.APPLICATION_DELEGATE, name = "RNWalletApplicationDelegate")
 class RNApplicationDelegate : AbsReactApplication(), ApplicationDelegate {
 
     fun init(context: Context?) {
-        attachBaseContext(/*RNBaseContext*/(context))
+        attachBaseContext(context)
     }
 
     override fun onCreate() {

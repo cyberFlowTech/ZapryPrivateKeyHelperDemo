@@ -24,7 +24,6 @@ class MimoReactNativePackage : ReactPackage {
         }
         list.add(MimoReactNativeModule.createInstance(p0))
         list.add(WalletSdkReactModule.createInstance(p0))
-        list.add(MimoRNWeb3Module.createInstance(p0))
         return list
     }
 

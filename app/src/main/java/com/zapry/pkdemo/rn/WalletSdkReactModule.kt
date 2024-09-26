@@ -15,8 +15,6 @@ class WalletSdkReactModule private constructor(context: ReactApplicationContext)
         @Volatile
         private var weakInstance: WeakReference<WalletSdkReactModule?>? = null
 
-        private const val ACTION_SEND_TRANSACTION_CALLBACK_CODE = "sendTransactionCallback"
-
         fun createInstance(context: ReactApplicationContext): WalletSdkReactModule {
             return WalletSdkReactModule(context).also {
                 weakInstance = WeakReference(it)

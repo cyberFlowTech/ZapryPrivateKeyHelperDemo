@@ -2,24 +2,15 @@ package com.zapry.pkdemo.rn
 
 import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
-import android.app.Activity
 import android.content.Context
-import android.content.Intent
-import android.content.SharedPreferences
-import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.UiThread
-import androidx.lifecycle.Lifecycle
-import androidx.lifecycle.lifecycleScope
-import androidx.lifecycle.repeatOnLifecycle
-import com.cyberflow.mimolite.lib_private_key.PrivateKeyLib
 import com.cyberflow.mimolite.lib_private_key.biometric.BiometricHelper
 import com.cyberflow.mimolite.lib_private_key.PrivateKeyMgr
-import com.cyberflow.mimolite.lib_private_key.SP_WALLET
 import com.facebook.react.ReactActivity
 import com.facebook.react.ReactActivityDelegate
 import com.facebook.react.bridge.Promise
@@ -33,9 +24,6 @@ import com.zapry.pkdemo.constant.LoginConstant
 import com.zapry.pkdemo.databinding.ActivityRnWalletBinding
 import com.zapry.pkdemo.ext.versionCode
 import com.zapry.pkdemo.model.MultiWalletInfo
-import com.zapry.pkdemo.model.RNWalletInfo
-import com.zapry.pkdemo.util.SystemUIUtil
-import kotlinx.coroutines.launch
 
 
 open class RNWalletActivity() : ReactActivity(), IWindowActionApi, RNActionInterface {
@@ -45,6 +33,12 @@ open class RNWalletActivity() : ReactActivity(), IWindowActionApi, RNActionInter
     private var canBack = true
 
     private val windowActionDelegateImpl by lazy { WindowActionDelegateImpl.create(this) }
+
+    private val sp
+        get() = this.getSharedPreferences(
+            SP_DEMO,
+            Context.MODE_PRIVATE
+        )
 
     private lateinit var loadingView: ActivityRnWalletBinding
     private lateinit var animatorSet: AnimatorSet
@@ -72,7 +66,6 @@ open class RNWalletActivity() : ReactActivity(), IWindowActionApi, RNActionInter
     }
 
     override fun attachBaseContext(newBase: Context?) {
-//        super.attachBaseContext(RNBaseContext(newBase))
         super.attachBaseContext(newBase)
     }
 
@@ -90,31 +83,6 @@ open class RNWalletActivity() : ReactActivity(), IWindowActionApi, RNActionInter
 
         windowActionDelegateImpl.onCreate(savedInstanceState)
         showLoading()
-//        val walletUnbindFlow = CmdManager.instance.cmdFlow
-//            .filter {
-//                it.javaClass.name == CmdWalletUnbind::class.java.name
-//            }
-//            .shareIn(lifecycleScope, SharingStarted.Lazily)
-
-        // 解绑钱包只在Activity活动时接收
-        lifecycleScope.launch {
-            repeatOnLifecycle(Lifecycle.State.STARTED) {
-//                walletUnbindFlow.collect {
-//                    Log.i(TAG, "receive unbind wallet")
-//                    Web3Manager.getInstance().removeWallet()
-//
-//                    MimoReactNativeModule.getInstance()?.emitEventToJsModule(JSEventName.WalletJostle)
-//
-//                    CommonConfirmDialog.Builder()
-//                        .setTitle(R.string.common_tip)
-//                        .setSubTitle(R.string.wallet_unbind_rn_tips_content)
-//                        .setCancel(null as String?)
-//                        .setConfirm(R.string.wallet_confirm_add)
-//                        .build()
-//                        .show(supportFragmentManager, "wallet_unbind")
-//                }
-            }
-        }
     }
 
     override fun onPause() {
@@ -133,8 +101,6 @@ open class RNWalletActivity() : ReactActivity(), IWindowActionApi, RNActionInter
     }
 
     override fun onDestroy() {
-        Log.d(TAG, "onDestroy: ====")
-//        MimoReactNativeModule.getInstance()?.emitEventToJsModule(JSEventName.WalletExit)
         super.onDestroy()
         ReactNativeFlipper.stop()
         reactNativeHost.reactInstanceManager.onHostDestroy(this)
@@ -150,34 +116,6 @@ open class RNWalletActivity() : ReactActivity(), IWindowActionApi, RNActionInter
         }
     }
 
-//    override fun onNewIntent(intent: Intent?) {
-//        super.onNewIntent(intent)
-//        reactInstanceManager.recreateReactContextInBackground()
-//    }
-
-    @Deprecated("Deprecated in Java")
-//    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-//        super.onActivityResult(requestCode, resultCode, data)
-//        if (requestCode == PermissionUtils.REQUEST_SCAN_QR_CODE) {
-//            if (resultCode == Activity.RESULT_OK) {
-//                val content = PermissionUtils.getCodedContent(data)
-//                Log.d(TAG, "onActivityResult: content = $content")
-//
-//                val isAddress = AppLinkStrategy.ReactNativeAddress.matches(content)
-//
-//                if (isAddress) {
-//                    scanPromise?.resolve(content)
-//                } else {
-//                    AppLinkManager.instance.handle(this, content)
-//                }
-//            } else {
-//                Log.d(TAG, "onActivityResult: cancel")
-//                scanPromise?.reject(Exception("Cancel"))
-//            }
-//            scanPromise = null
-//        }
-//    }
-
     override fun runOnWindowActive(run: () -> Unit) {
         windowActionDelegateImpl.runOnWindowActive(run)
     }
@@ -188,65 +126,21 @@ open class RNWalletActivity() : ReactActivity(), IWindowActionApi, RNActionInter
     open fun createOptions(bundle: Bundle? = null): Bundle {
         Log.d(TAG, "createOptions: bundle = $bundle")
         val extras = Bundle(bundle ?: intent?.extras ?: Bundle())
-//        val env = if (isProductionStage()) {
-//            RedEnvelopeApiRepository.ENV_PROD
-//        } else {
-//            RedEnvelopeApiRepository.ENV_DEV
-//        }
+
         extras.putString("env", ENV_DEV)
-
-//        if (extras.getString("screen") == "Transfer") {
-//            if (!extras.getBoolean("isScan", false)) {
-//                // 非扫码转账需要传递 chainCode
-//                extras.putString("chainCode", ChainService.DEFAULT_CHAIN_CODE)
-//            } else {
-//                extras.remove("isScan")
-//            }
-//        }
-
-//        val address = viewModel.getWallet()?.address
-//        if (!address.isNullOrEmpty()) {
-//            extras.putString("address", address)
-//        }
-
-//        PersonalUserInfoManager.instance.userInfoFlow.value.also { userInfo ->
         extras.putString("userId", TEST_USER_ID)
         extras.putString(
             "avatar",
             "https://infras-test.s3.amazonaws.com/icon/847711-1719208889668.jpg?size=small&type=avatar"
         )
         extras.putString("nick", "tester")
-//        }
-
         extras.putString(LoginConstant.LANGUAGE, "en")
-//        extras.putStringArray(
-//            "supportLangs",
-//            LanguageUtil.getSupportLanguages().toTypedArray()
-//        )
-
         extras.putString(
             LoginConstant.VERSION_CODE,
             applicationContext.versionCode().toString()
 
         )
-
-//        val codes = viewModel.getChainCodes()
-//        Log.d(TAG, "createOptions: ids = $codes, size = ${codes.size}")
-//
-//        if (codes.isNotEmpty()) {
-//            Bundle().apply {
-//                codes.forEach {
-//                    putString(it.key, it.value)
-//                }
-//                extras.putBundle("multiAddress", this)
-//            }
-//        }
-
         extras.putString(LoginConstant.API, LoginConstant.api)
-//        extras.putString(
-//            LoginConstant.SESSID,
-//            PersonalUserInfoManager.instance.userInfoFlow.value.sessionId
-//        )
         extras.putString(LoginConstant.UUID, "")
         extras.putString(LoginConstant.VERSION, "")
         extras.putString(
@@ -293,9 +187,7 @@ open class RNWalletActivity() : ReactActivity(), IWindowActionApi, RNActionInter
     override fun dismissLoading() {
         isLoading = false
         if (::animatorSet.isInitialized) {
-//            runCachingWithLog {
             animatorSet.cancel()
-//            }
         }
         if (::loadingView.isInitialized) {
             val root = loadingView.root
@@ -303,45 +195,6 @@ open class RNWalletActivity() : ReactActivity(), IWindowActionApi, RNActionInter
         }
     }
 
-
-    override fun setWalletInfo(walletInfo: RNWalletInfo) {
-        PrivateKeyMgr.saveMnemonic(TEST_USER_ID, walletInfo.mnemonic)
-//        viewModel.saveWallet(walletInfo)
-        setResult(RESULT_OK)
-    }
-
-    override fun getWalletInfo(promise: Promise) {
-//        val info = viewModel.getWallet()
-//        if (info == null) {
-//            promise.reject(Exception("Wallet info is empty"))
-//        } else {
-//            val map = Arguments.createMap().apply {
-//                putString("address", info.address)
-//                putString("mnemonic", info.mnemonic)
-//                putString("privateKey", info.privateKey)
-//            }
-//            promise.resolve(map)
-//        }
-    }
-
-    override fun removePrivateKey(promise: Promise) {
-//        viewModel.removePrivateKey()
-//        promise.resolve(null)
-    }
-
-    private var scanPromise: Promise? = null
-
-    //    @UiThread
-//    override fun scan(promise: Promise) {
-//        scanPromise = promise
-//        PermissionUtils.checkCameraPermission(this)
-//    }
-
-    private val sp
-        get() = this.getSharedPreferences(
-            SP_DEMO,
-            Context.MODE_PRIVATE
-        )
 
     override fun setMultiWalletInfo(walletInfo: MultiWalletInfo) {
         val chainCodes = mutableSetOf<String>()
@@ -362,33 +215,6 @@ open class RNWalletActivity() : ReactActivity(), IWindowActionApi, RNActionInter
 
             else -> super.otherAction(action, params, promise)
         }
-    }
-
-    /**
-     * 是否启用返回
-     */
-//    private fun setBackGestureEnable(params: String?) {
-//        Log.i(TAG, "setBackGestureEnable() called with: params = $params")
-//        GsonUtils.fromJson<Map<String, String>>(
-//            params,
-//            object : TypeToken<Map<String, String>>() {}.type
-//        )?.apply {
-//            canBack = try {
-//                // true 可以返回，false 不可以返回
-//                get("enabled").toBoolean()
-//            } catch (e: Exception) {
-//                e.printStackTrace()
-//                true // 异常可以返回
-//            }.apply {
-//                Log.i(TAG, "setBackGestureEnable() called canBack is $this")
-//            }
-//        }
-//    }
-
-//    override fun getWalletByChainCode(chainCode: String) = viewModel.getWalletByChainCode(chainCode)
-
-    override fun getWalletByChainCode(chainCode: String): Map<String, String> {
-        TODO("Not yet implemented")
     }
 
     companion object {

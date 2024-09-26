@@ -57,18 +57,12 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
-        binding.initView()
         binding.initListener()
         initData()
-        eventObserver()
     }
 
     private fun initData() {
         spWallet.edit().putInt(TEST_USER_ID + SETTING_KEY_PAY_VERIFY, VerifyType.BIOMETRICS.value).apply()
-    }
-
-    private fun ActivityMainBinding.initView() {
-
     }
 
     private fun ActivityMainBinding.initListener() {
@@ -106,10 +100,6 @@ class MainActivity : AppCompatActivity() {
             PrivateKeyMgr.removeWallet(sdkList)
             Toast.makeText(this@MainActivity, "Delete Success", Toast.LENGTH_SHORT).show()
         }
-    }
-
-    private fun eventObserver() {
-        // TODO: 接收授权dialog弹窗事件 
     }
     
     private fun startRNWallet(
@@ -218,20 +208,12 @@ class MainActivity : AppCompatActivity() {
 
     private fun requestPayAuth(params: String?) {
         Log.d(TAG, "requestPayAuth() called with: params = $params, promise = ")
-//        if (currentActivity !is FragmentActivity) {
-//            promise.reject(Throwable("currentActivity not FragmentActivity"))
-//            return
-//        }
-
-//        val activity = currentActivity as FragmentActivity
         GsonUtils.fromJson(params, PayAuth::class.java)?.apply {
             val callback = object : BiometricCallback() {
                 override fun onAuthenticationError(
                     errorCode: Int,
                     errString: CharSequence
                 ) {
-                    val error = errString.toString()
-//                    promise.reject(errorCode.toString(), error, Throwable(error))
                 }
 
                 override fun onAuthenticationSucceeded(result: BiometricPrompt.AuthenticationResult) {
@@ -245,19 +227,11 @@ class MainActivity : AppCompatActivity() {
                 override fun onPasswordFailed() {
                     super.onPasswordFailed()
                     Toast.makeText(this@MainActivity, "Auth Failed", Toast.LENGTH_SHORT).show()
-//                    promise.reject(
-//                        ERROR_CODE_PASSWORD_FAILED,
-//                        INCORRECT_PASSWORD,
-//                        Throwable(INCORRECT_PASSWORD)
-//                    )
                 }
 
                 override fun onAuthenticationFailed() {
                     val message = getString(R.string.verification_failed_tip)
-                        ?: "authentication failed"
                     Toast.makeText(this@MainActivity, message, Toast.LENGTH_SHORT).show()
-
-//                    promise.reject(ERROR_CODE_BIOMETRIC_FAILED, message, Throwable(message))
                 }
             }
 
@@ -273,7 +247,6 @@ class MainActivity : AppCompatActivity() {
                                 .show(supportFragmentManager)
                         } catch (e: Exception) {
                             Log.e(TAG, e.stackTraceToString())
-//                            promise.reject(Throwable(e.message))
                         }
                     }
                 }
