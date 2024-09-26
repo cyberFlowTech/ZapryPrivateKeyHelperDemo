@@ -3,7 +3,8 @@ buildscript {
     ext.kotlin_version = "1.8.21"
     repositories {
         google()
-        jcenter()
+        mavenCentral()
+        gradlePluginPortal()
         maven { url 'https://jitpack.io' }
     }
     dependencies {
@@ -17,9 +18,17 @@ buildscript {
 //兼容低版本的android studio，需要加上下面几句
 allprojects {
     repositories {
+        maven {
+            allowInsecureProtocol true
+            url 'http://maven.aliyun.com/nexus/content/groups/public/'
+        }
         google()
-        jcenter()
+        mavenCentral()
         maven { url 'https://jitpack.io' }
+
+        flatDir {
+            dirs 'aar', '../aar'
+        }
     }
 }
 
