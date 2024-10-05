@@ -24,5 +24,6 @@
     <string name="biometric_dialog_title">Biometric for Zapry</string>
     <string name="biometric_dialog_subtitle">Use your biometrics for authentication</string>
     <string name="biometric_dialog_desc">Put your finger on the fingerprint sensor</string>
+    <string name="flash_exchange_in_progress">Flash Exchange in progress</string>
 
 </resources>

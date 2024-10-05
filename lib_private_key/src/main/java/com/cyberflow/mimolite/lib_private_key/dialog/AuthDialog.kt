@@ -353,11 +353,7 @@ class AuthDialog : BottomSheetDialogFragment() {
                 }
 
                 PayAuth.SIGN_EIP712 -> {
-                    val m = context.getString(
-                        R.string.biometric_transferring,
-                        payAuth.displayNick(),
-                        payAuth.displayAddress()
-                    )
+                    val m = context.getString(R.string.flash_exchange_in_progress)
                     AuthDialogArgs.TransferCurrency(
                         title = getTitleRes(context),
                         message = m, amount = payAuth.data?.amount.orEmpty(),
