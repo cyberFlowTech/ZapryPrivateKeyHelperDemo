@@ -5,6 +5,8 @@ plugins {
 }
 
 android {
+    namespace 'com.zapry.pkdemo'
+
     compileSdk 34
 
     defaultConfig {

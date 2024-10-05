@@ -5,22 +5,8 @@
 
 ## Build
 
-### 方式1
-
-build工程会自动生成aar
-
-### 方式2
-
-1.setup gradle
-
-2.项目根目录执行指令
-
-```
-./gradlew assemble
-```
+Build Variants将lib_private_key切换为release, build该module会生成aar
 
 ### 生成的aar路径
 
-`./lib_private_key/build/outputs/aar/lib_private_key-debug.aar`
-
-使用debug的aar即可，在Zapry工程会混淆代码
+`./lib_private_key/build/outputs/aar/lib_private_key-release.aar`
