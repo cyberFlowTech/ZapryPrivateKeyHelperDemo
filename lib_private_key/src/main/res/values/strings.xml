@@ -1,4 +1,5 @@
 <resources>
+    <!--只需粘贴默认语言字符串，主工程引入sdk后，strings会合并-->
     <string name="biometric_input_pay_password">Enter your payment password</string>
     <string name="biometric_sending_crypto">Sending a Crypto Box</string>
     <string name="biometric_contract_trading">Contract transaction</string>

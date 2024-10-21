@@ -18,11 +18,11 @@ import androidx.core.view.isVisible
 import androidx.fragment.app.DialogFragment
 import com.cyberflow.mimolite.lib_private_key.R
 
-import com.cyberflow.mimolite.lib_private_key.databinding.DialogCommonConfirmBinding
+import com.cyberflow.mimolite.lib_private_key.databinding.PrivateKeyDialogCommonConfirmBinding
 
 class CommonConfirmDialog : DialogFragment() {
-    private var _binding: DialogCommonConfirmBinding? = null
-    private val binding: DialogCommonConfirmBinding get() = _binding!!
+    private var _binding: PrivateKeyDialogCommonConfirmBinding? = null
+    private val binding: PrivateKeyDialogCommonConfirmBinding get() = _binding!!
 
     @StringRes
     private var titleRes: Int? = null
@@ -78,6 +78,8 @@ class CommonConfirmDialog : DialogFragment() {
 
     companion object {
 
+        val TAG: String = CommonConfirmDialog::class.java.simpleName
+
         @Deprecated("Use Builder() instead")
         fun newInstance(
             title: String? = null,
@@ -101,7 +103,11 @@ class CommonConfirmDialog : DialogFragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = DialogCommonConfirmBinding.inflate(inflater, container, false)
+        _binding = PrivateKeyDialogCommonConfirmBinding.inflate(
+            inflater,
+            container,
+            false
+        )
         initView()
         return binding.root
     }
@@ -401,7 +407,7 @@ class CommonConfirmDialog : DialogFragment() {
          * 点按屏幕其他位置、返回键时，弹窗是否可取消
          */
         fun setCancelable(
-            cancelable:Boolean
+            cancelable: Boolean
         ): Builder {
             this.cancelable = cancelable
             return this

@@ -109,7 +109,7 @@ object BiometricHelper {
                 navigateToSystemFingerprintSettings(context)
             }
             .build()
-            .show(context.supportFragmentManager, TAG)
+            .show(context.supportFragmentManager, CommonConfirmDialog.TAG)
     }
 
     private fun navigateToSystemFingerprintSettings(context: Context) {
